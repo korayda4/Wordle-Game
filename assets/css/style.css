@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(90deg, rgb(58, 170, 180) 0%, rgb(29, 74, 253) 50%, rgb(148, 69, 252) 100%);
+
+}
+.wordle-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: repeat(6, 40px);
+    gap: 4px;
+    margin-bottom: 20px;
+}
+.letter-box {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    border: 1px solid #000;
+}
+.correct {
+    transition: 1000ms;
+
+    background-color: rgb(0, 255, 0);
+    color: white;
+}
+.wrong-position {
+    transition: 1000ms;
+    background-color: yellow;
+}
+#result {
+    font-size: 24px;
+    text-align: center;
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: visibility 0s linear 1s, transform 0.5s ease;
+    font-size: 18px;
+    text-align: center;
+}
+input {
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+#guess {
+    border-radius: 24px;
+    border: none;
+    max-width: 210px;
+}
